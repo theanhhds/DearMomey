@@ -1,0 +1,13 @@
+<div class="w3-container">
+	<h1 class="w3-center">Hello, {{$ctrl.username}}</h1>
+	<br>
+	<div class="w3-modal" id="modal-addnew">
+		<div class="w3-modal-content " style="width: 75%">
+			<app-addnew in-data="$ctrl.username"></app-addnew>
+		</div>
+	</div>
+	
+	<app-analyze></app-analyze>
+	<br><br>
+</div>
+<app-navbar></app-navbar>

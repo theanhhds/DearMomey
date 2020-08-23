@@ -1,0 +1,27 @@
+{
+  "name": "dearmomey",
+  "version": "1.0.0",
+  "description": "dearmomey server",
+  "main": "server.js",
+  "engines": {
+    "node": "10.x"
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "cors": "*",
+    "crypto-random-string": "^3.2.0",
+    "express": "*",
+    "mongodb": "*",
+    "password-hash": "^1.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "TheAnh",
+  "license": "ISC",
+  "devDependencies": {},
+  "keywords": [
+    "expends"
+  ]
+}

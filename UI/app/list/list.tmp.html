@@ -1,0 +1,25 @@
+<div class="w3-container">
+	<div class="w3-modal" id="modal_detail">
+		<div class="w3-modal-content">
+			<app-detail expend = "$ctrl.expend_detail"></app-detail>
+		</div>
+	</div>
+	
+	<h2 class="w3-center">List of your expends</h2>
+	<br><br>
+	<div class="w3-center">
+		<table class="w3-table w3-striped w3-bordered w3-left">
+			<tr><th>Name</th><th>Amount</th><th>Date</th><th></th></tr>
+			<tr class="w3-animate-opacity" ng-repeat = "exp in $ctrl.expendsList | limitTo: $ctrl.limitTo">
+				<td ng-click="$ctrl.openDetailModal(exp)" style="cursor:pointer" ><span >{{exp.name}}</span></td>
+				<td>€{{exp.amount}}</td>
+				<td>{{exp.date.date}}/{{exp.date.month}}/{{exp.date.year}}</td>
+				<td><div style="cursor:pointer" ng-click="$ctrl.openDetailModal(exp)" class="w3-large w3-center w3-text-blue">
+					<i class="fas fa-info-circle"></i>
+				</div></td>
+			</tr>
+		</table>
+		<br>
+		<button class="w3-btn w3-blue w3-margin" ng-click="$ctrl.loadMore()" ng-disabled="$ctrl.isMore">Load more</button>
+	</div>
+</div>

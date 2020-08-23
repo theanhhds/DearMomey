@@ -1,0 +1,39 @@
+<div class="w3-container">
+	<h2 class="w3-center">Let's see how much you spent</h2>
+	<br>
+	<div class="w3-container" style="width:100%; text-align:center;">
+		<canvas class="chart chart-pie"  style="display:inline" height="300" chart-data="data" chart-labels="labels" 
+			chart-series="series" chart-click="onClick"></canvas> 
+	</div>
+	<br><br>
+	<div class="w3-row-padding w3-stretch w3-center">
+			<div class="w3-col l3"><br></div>
+			<div class="w3-col l6">
+					<form name="dateForm" class="w3-center">
+					<div class="w3-row-padding w3-stretch">
+						<div class="w3-col s6 w3-center">
+							<input required class="w3-input"
+								type="date" ng-model="$ctrl.s_date" ng-change="$ctrl.handleChangeSDate()">
+						</div>
+						<div class="w3-col s6 w3-center">
+							<input required class="w3-input"
+								type="date" ng-model="$ctrl.e_date" min="{{$ctrl.min_date}}">
+						</div>
+					</div><br>
+					<div class="w3-center">
+							<button ng-click="$ctrl.selectDate()" class="w3-btn w3-blue" ng-disabled="dateForm.$invalid">Magic!</button>
+					</div>
+					</form>
+			</div>
+			<div class="w3-col l3"><br></div>
+	</div>
+	<div class="w3-center" ng-if="$ctrl.totalSpend">
+		Your expends for this period is 
+		<div class="w3-xlarge"><b>EUR {{$ctrl.totalSpend}}</b></div>
+		<br><br>
+		<app-list expends-list="$ctrl.listExps"></app-list>
+	</div>
+	
+</div>
+<br><br>
+<app-navbar></app-navbar>

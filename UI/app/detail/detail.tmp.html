@@ -1,0 +1,12 @@
+<div class="w3-container w3-center">
+	<h1>{{$ctrl.expend.name}}</h1>
+	<br><br>
+	<table class="w3-table w3-margin">
+		<tr><th>What have you done: </th><td>{{$ctrl.expend.name}}</td></tr>
+		<tr><th>Amount you spent: </th><td>EUR {{$ctrl.expend.amount}}</td></tr>
+		<tr><th>What was it for: </th><td>{{$ctrl.expend.category}}</td></tr>
+		<tr><th>On date: </th><td>{{$ctrl.expend.date.date}}/{{$ctrl.expend.date.month}}/{{$ctrl.expend.date.year}}</td></tr>
+		<tr><th>Something you noted: </th><td>{{$ctrl.expend.note}}</td></tr>
+	</table>
+	<div class="w3-btn w3-red w3-right w3-margin" ng-click = "$ctrl.closeDetailModal()">Close</div>
+</div>

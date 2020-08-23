@@ -1,0 +1,40 @@
+<div class="w3-container">
+	
+	<!--Overlay content-->
+	<div class="w3-modal" id="ok_modal">
+		<div class="w3-modal-content w3-center w3-padding-large">
+			<h3>Welcome!</h3>
+			<div>You are now registered.</div>
+			<div>You will be redirected to <a href="#!/login">log in</a> page in a few seconds...</div>
+		</div>
+	</div>
+	<!--Register content-->
+	<h1 class="w3-center">Welcome, glad that you joined us!</h1>
+	<br><br><br>
+	<div class="w3-row">
+		<div class="w3-col s3"><br></div>
+		<div class="w3-col s6">
+			<div class="w3-card-4 w3-container w3-padding-large">
+				<label><b>Username </b></label><input class="w3-input" ng-model="$ctrl.usr"/>
+				<label><b>Password </b></label><input type="password" class="w3-input" ng-model="$ctrl.psw"/>
+				<label><b>Confirm Password </b></label><input type="password" class="w3-input" ng-model="$ctrl.psw_c"/>
+				<label><b>Display name </b></label><input class="w3-input" ng-model="$ctrl.fname"/>
+				<br>
+				<button class="w3-btn w3-green w3-right" ng-click="$ctrl.register()">Sign me in!</button>
+				
+				<div ng-if="$ctrl.show" class="w3-left">
+					<div ng-if="$ctrl.isMatch" class="w3-left w3-text-red">Password doesn't match!</div><br>
+					<div ng-if="$ctrl.isFull" class="w3-left w3-text-red">Please fill in everything!</div>
+					<div ng-if="!$ctrl.isMatch"><br></div>
+					<div ng-if="!$ctrl.isFull"><br></div>
+				</div>
+				<div ng-if="!$ctrl.show" class="w3-right">
+					<br><br>
+				</div>
+					
+			</div>
+			<div class="w3-center w3-margin">Already have an account? <a href="#!/login">Login</a></div>
+		</div>
+		<div class="w3-col s3"><br></div>
+	</div>
+</div>
