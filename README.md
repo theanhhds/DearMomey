@@ -18,6 +18,6 @@ You should have installed `npm` already
 ##### 2.2)
 -Use some program to host the front end. I used "live-server". You can download it from `npm install live-server`
 -Run 
-    `cd UI
+    `cd UI<br>
     live-server`
  
